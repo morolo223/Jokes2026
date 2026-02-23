@@ -45,7 +45,7 @@ function addJokes(req,res){
 
         let dir = fs.readdirSync(dataPath)
         let fileName = dir.length + '.json'
-        let filePath = path(dataPath, fileName)
+        let filePath = path.jo(dataPath, fileName)
         fs.writeFileSync(filePath, JSON.stringify(joke))
     })
     res.end()
